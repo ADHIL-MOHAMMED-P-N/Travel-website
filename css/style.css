@@ -1,7 +1,6 @@
 
 .navbar{
     border-bottom: 3px solid #58aeda;
-    opacity: 0.8;
 }
 #home{
     background-image: url(../images/bg.jpg);
@@ -9,6 +8,9 @@
     background-size: cover;
     background-attachment: fixed;
     height: 700px;
+}
+.card-form{
+    opacity: 0.8;
 }
 #home .home-content{
     padding-top: 150px;
