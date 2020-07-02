@@ -38,9 +38,11 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;  
-    
 }
 .header-overlay{
     background-color: rgba(0,0,0);
     opacity: 0.7;
+}
+#packages .col-md-6 .d-flex img{
+    
 }
