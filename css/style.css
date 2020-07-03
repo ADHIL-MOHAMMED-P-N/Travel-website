@@ -21,7 +21,7 @@
     height: 700px;
     background: rgba(0,0,0,0.6);
 }
-#home i, {
+#home i {
     color: white;
     background-color:#5bc0de;
     border-radius: 4px;
@@ -30,7 +30,7 @@
 #home .fa-train{
     padding: 9px;
 }
-#home .fa-ship ,{
+#home .fa-ship {
     padding: 5px;
 }
 #packagesHeader{

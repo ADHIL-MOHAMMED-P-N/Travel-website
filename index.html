@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     
 </head>
-<body class="bg-light">
+<body class="bg-light" data-spy="scroll" data-target="#main-nav" id="homeSection">
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="main-nav">
         <div class="container">
             <a href="index.html" class="navbar-brand">Travel web</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="myNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#homeSection" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#packagesHeader" class="nav-link">Packages</a>
@@ -31,7 +31,7 @@
                         <a href="#aboutusHeader" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contactHeader" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -229,9 +229,137 @@
             </div>
         </div>
     </section>
+    <!---HOTEL SECTION END-->
+    <!---ABOUT US-->
+    <section id="aboutusHeader" class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center py-5 text-white ">
+                    <h1 class="display-4">About Us</h1>
+                    <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatem?</p>
+                    <button class="btn btn-light">Know More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aboutus">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 p-5 order-2">
+                    <div class="d-flex py-3">
+                        <div class="self-align-start">
+                            <i class="fas fa-check fa-2x p-2"></i>
+                        </div>
+                        <div class="self-align-end p-2">
+                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
 
+                    <div class="d-flex py-3">
+                        <div class="self-align-start p-2">
+                            <i class="fas fa-check fa-2x"></i>
+                        </div>
+                        <div class="self-align-end p-2">
+                            <p class="lead">ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
 
+                    <div class="d-flex py-3">
+                        <div class="self-align-start p-2">
+                            <i class="fas fa-check fa-2x"></i>
+                        </div>
+                        <div class="self-align-end p-2">
+                            <p class="lead"> dolor sit amet tupic stert leck</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex py-3">
+                        <div class="self-align-start p-2">
+                            <i class="fas fa-check fa-2x"></i>
+                        </div>
+                        <div class="self-align-end p-2">
+                            <p class="lead">Lorem amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-5 order-1">
+                    <img src="images/aboutus.jpg" alt="Hotel Image" class="img img-fluid shadow">
+                    <div class="text-center py-4">
+                    <button class="btn btn-info">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center py-4">
+                    <h2>Contact</h2>
+                    <p class="lead">Copyright &copy; <span id="date"></span></p>
+                    <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Contact</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!---modal-->
+<div class="modal text-dark" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Contact</h4>
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"></label>
+                       <textarea  class="form-control"></textarea>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <div class="btn btn-primary">Submit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--JQUERY--->
     <script src="js/jquey.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        //current year
+            $("#date").text(new Date().getFullYear());
+        //scroll spy
+            $("body").scrollspy({target :"#main-nav"});
+        //smooth scrolling
+            // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+    </script>
 </body>
 </html>
