@@ -9,9 +9,7 @@
     background-attachment: fixed;
     height: 700px;
 }
-.card-form{
-    opacity: 0.8;
-}
+
 #home .home-content{
     padding-top: 150px;
 }
@@ -23,16 +21,16 @@
     height: 700px;
     background: rgba(0,0,0,0.6);
 }
-#home i{
+#home i, {
     color: white;
     background-color:#5bc0de;
-    padding: 6px;
     border-radius: 4px;
+    padding: 6px;
 }
 #home .fa-train{
     padding: 9px;
 }
-#home .fa-ship{
+#home .fa-ship ,{
     padding: 5px;
 }
 #packagesHeader{
@@ -45,6 +43,31 @@
     background-color: rgba(0,0,0);
     opacity: 0.7;
 }
-#packages .col-md-6 .d-flex img{
-    
+#hotelHeader{
+    background-image: url(../images/hotel.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+}
+
+#hotel i{
+    color: white;
+    background-color:#5bc0de;
+    border-radius: 4px;
+}
+#hotel .fa-hotel{
+    margin-top: 10px;
+}
+#hotel .fa-umbrella-beach{
+    margin-top: 6px;
+    padding: 7px;
+    margin-left: -6px;
+}
+#hotel .fa-h-square{
+    padding: 10px;
+    margin-left: -5px;
+}
+#hotel .fa-utensils{
+    padding: 10px;
+    margin-left: -3px;
 }
